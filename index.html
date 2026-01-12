@@ -357,6 +357,50 @@
             font-size: 0.75rem;
             color: rgba(255,255,255,0.7);
         }
+
+        /* --- RESPONSIVE MOBILE (Tambahkan di bagian bawah style) --- */
+        @media screen and (max-width: 480px) {
+            /* Kurangi padding body biar konten lebih lega di HP */
+            body {
+                padding: 15px;
+            }
+
+            /* Kecilkan ukuran logo biar gak makan tempat */
+            .logo-wrapper {
+                width: 220px;
+                height: 220px;
+                margin-bottom: 20px;
+            }
+            
+            .logo-img {
+                width: 160px;
+            }
+
+            /* Partikel animasi dikecilkan skalanya di HP */
+            .particle {
+                transform: scale(0.7);
+            }
+
+            /* Kecilkan font judul */
+            .brand-title {
+                font-size: 1.8rem;
+            }
+
+            .tagline {
+                font-size: 0.7rem;
+                margin-bottom: 25px;
+            }
+
+            /* Tombol lebih compact */
+            .hero-btn {
+                padding: 14px 20px;
+            }
+            
+            /* Background blob dibuat lebih transparan biar teks tetap jelas */
+            .organic-blob {
+                opacity: 0.5;
+            }
+        }
     </style>
 </head>
 <body>
