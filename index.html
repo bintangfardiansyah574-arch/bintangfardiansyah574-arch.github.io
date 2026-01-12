@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RenggiJoy Official - Link in Bio</title>
     
-    <!-- Meta Tags untuk Social Media -->
+    <!-- Meta Tags untuk Social Media (PENTING untuk preview di WhatsApp/IG) -->
     <meta property="og:title" content="RenggiJoy Official">
     <meta property="og:description" content="Joy in Every Bite! Cek produk terbaru dan promo kami di sini.">
     <meta property="og:image" content="https://z-cdn-media.chatglm.cn/files/8cba27da-3b60-4e85-a3d0-f1bc0eb30a29.png?auth_key=1868198765-18dfc845933a48edb073790ea5443367-0-5eaaf8cc43aa25008be3c3f945b3d512">
@@ -26,7 +26,7 @@
             --border-glass: rgba(255, 255, 255, 0.7);
             --text-main: #2d3436;
             --shadow-strong: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            --primary-glow: rgba(255, 215, 0, 0.4); /* Warna glowing keemasan */
+            --primary-glow: rgba(255, 215, 0, 0.4);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -110,22 +110,21 @@
         /* --- CONTAINER --- */
         .container {
             width: 100%;
-            max-width: 480px;
+            max-width: 480px; /* Batas lebar agar rapi di laptop dan HP */
             position: relative;
             z-index: 10;
             text-align: center;
         }
 
-        /* --- LOGO HERO (UPDATED EFFECTS) --- */
+        /* --- LOGO HERO --- */
         .logo-wrapper {
             position: relative;
-            width: 260px; /* Container sedikit lebih besar untuk efek dekorasi */
+            width: 260px; 
             height: 260px;
             margin: 0 auto 30px;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Animasi Melayang */
             animation: floatLogo 6s ease-in-out infinite; 
         }
 
@@ -138,7 +137,7 @@
         .pulse-glow {
             position: absolute;
             width: 200px; height: 200px;
-            background: rgba(255, 215, 0, 0.3); /* Cahaya keemasan */
+            background: rgba(255, 215, 0, 0.3); 
             border-radius: 50%;
             z-index: 0;
             animation: pulse 3s infinite;
@@ -170,7 +169,7 @@
             animation: spin 25s linear infinite;
         }
 
-        /* 3. Partikel / Bintang Mengorbit (Shapes) */
+        /* 3. Partikel / Bintang Mengorbit */
         .particle {
             position: absolute;
             width: 12px; height: 12px;
@@ -192,11 +191,11 @@
 
         /* --- GAMBAR LOGO --- */
         .logo-img {
-            width: 200px; /* Ukuran gambar logo yang asli */
+            width: 200px; 
             height: auto;
             border-radius: 50%;
-            border: 8px solid #fff; /* Border putih tebal agar menonjol */
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2), 0 0 0 4px rgba(255,215,0,0.3); /* Bayangan dalam dan luar */
+            border: 8px solid #fff; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2), 0 0 0 4px rgba(255,215,0,0.3); 
             position: relative;
             z-index: 5;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -347,7 +346,7 @@
         }
 
         /* Icon Colors */
-        .ig-grad { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .ig-grad { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .tt-glow { color: #000; text-shadow: 2px 2px 0 #00f2ea, 3px 3px 0 #ff0050; }
         .wa-green { color: #25D366; }
 
@@ -356,50 +355,6 @@
             margin-top: 40px;
             font-size: 0.75rem;
             color: rgba(255,255,255,0.7);
-        }
-
-        /* --- RESPONSIVE MOBILE (Tambahkan di bagian bawah style) --- */
-        @media screen and (max-width: 480px) {
-            /* Kurangi padding body biar konten lebih lega di HP */
-            body {
-                padding: 15px;
-            }
-
-            /* Kecilkan ukuran logo biar gak makan tempat */
-            .logo-wrapper {
-                width: 220px;
-                height: 220px;
-                margin-bottom: 20px;
-            }
-            
-            .logo-img {
-                width: 160px;
-            }
-
-            /* Partikel animasi dikecilkan skalanya di HP */
-            .particle {
-                transform: scale(0.7);
-            }
-
-            /* Kecilkan font judul */
-            .brand-title {
-                font-size: 1.8rem;
-            }
-
-            .tagline {
-                font-size: 0.7rem;
-                margin-bottom: 25px;
-            }
-
-            /* Tombol lebih compact */
-            .hero-btn {
-                padding: 14px 20px;
-            }
-            
-            /* Background blob dibuat lebih transparan biar teks tetap jelas */
-            .organic-blob {
-                opacity: 0.5;
-            }
         }
     </style>
 </head>
@@ -416,22 +371,16 @@
 
     <div class="container">
         
-        <!-- LOGO WRAPPER (ENHANCED) -->
+        <!-- LOGO WRAPPER -->
         <div class="logo-wrapper">
-            <!-- Efek Cahaya Berdenyut -->
             <div class="pulse-glow"></div>
-            
-            <!-- Cincin Mengelilingi -->
             <div class="deco-ring"></div>
             <div class="deco-ring-2"></div>
-            
-            <!-- Partikel/Bintang Mengorbit (Shapes) -->
             <div class="particle p1"></div>
             <div class="particle p2"></div>
             <div class="particle p3"></div>
             <div class="particle p4"></div>
 
-            <!-- GAMBAR LOGO BARU -->
             <img src="https://z-cdn-media.chatglm.cn/files/8cba27da-3b60-4e85-a3d0-f1bc0eb30a29.png?auth_key=1868198765-18dfc845933a48edb073790ea5443367-0-5eaaf8cc43aa25008be3c3f945b3d512" 
                  alt="RenggiJoy Logo" 
                  class="logo-img">
@@ -447,7 +396,7 @@
                     <i class="fab fa-instagram btn-icon ig-grad"></i>
                     <div class="btn-info">
                         <h3>Instagram</h3>
-                        <p>Produk</p>
+                        <p>Produk & Promo Terbaru</p>
                     </div>
                 </div>
                 <i class="fas fa-arrow-right btn-icon" style="font-size: 1rem; opacity:0.3;"></i>
@@ -458,7 +407,7 @@
                     <i class="fab fa-tiktok btn-icon tt-glow"></i>
                     <div class="btn-info">
                         <h3>TikTok Shop</h3>
-                        <p>Produk</p>
+                        <p>Video Viral & Flash Sale</p>
                     </div>
                 </div>
                 <i class="fas fa-arrow-right btn-icon" style="font-size: 1rem; opacity:0.3;"></i>
@@ -502,18 +451,17 @@
                     </div>
                 </div>
                 <div class="acc-body">
-                    <a href="https://wa.me/6282175926803" class="acc-link highlight-link">Aldi</a>
-                    <a href="https://wa.me/6282376393110" class="acc-link">Bintang</a>
-                    <a href="https://wa.me/6287810192244" class="acc-link">Giza</a>
-                    <a href="https://wa.me/6283824677472" class="acc-link">Sugianto</a>
-                    <a href="https://wa.me/6282280914867" class="acc-link">Zahwa</a>
-                </div>
+                    <a href="#" class="acc-link highlight-link">Aldi</a>
+                    <a href="#" class="acc-link">Bintang</a>
+                    <a href="#" class="acc-link">Giza</a>
+                    <a href="#" class="acc-link">Sugianto</a>
+                    <a href="#" class="acc-link">Zahwa</a>
                 </div>
             </div>
 
         </div>
 
-        <!-- Footer TANPA TAHUN -->
+        <!-- Footer -->
         <div class="footer">
             &copy; RenggiJoy Official
         </div>
