@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RenggiJoy Official - Link in Bio</title>
+    
+    <!-- Meta Tags untuk Social Media -->
+    <meta property="og:title" content="RenggiJoy Official">
+    <meta property="og:description" content="Joy in Every Bite! Cek produk terbaru dan promo kami di sini.">
+    <meta property="og:image" content="https://z-cdn-media.chatglm.cn/files/8cba27da-3b60-4e85-a3d0-f1bc0eb30a29.png?auth_key=1868198765-18dfc845933a48edb073790ea5443367-0-5eaaf8cc43aa25008be3c3f945b3d512">
+    <meta property="og:url" content="https://linktr.ee/renggioy">
+    <meta property="og:type" content="website">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 50%, #F6D365 100%);
+            --glass: rgba(255, 255, 255, 0.4);
+            --glass-solid: rgba(255, 255, 255, 0.95);
+            --border-glass: rgba(255, 255, 255, 0.7);
+            --text-main: #2d3436;
+            --shadow-strong: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --primary-glow: rgba(255, 215, 0, 0.4); /* Warna glowing keemasan */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-gradient);
+            background-size: 400% 400%;
+            animation: flowBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-main);
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        @keyframes flowBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- BACKGROUND SHAPES --- */
+        .background-layer {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .organic-blob {
+            position: absolute;
+            background: rgba(255,255,255,0.25);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            filter: blur(40px);
+            animation: morphBlob 8s ease-in-out infinite alternate;
+        }
+
+        .blob-tl { width: 500px; height: 500px; top: -150px; left: -150px; background: rgba(255,255,255,0.3); }
+
+        .ring-tr {
+            position: absolute;
+            width: 300px; height: 300px;
+            top: -50px; right: -50px;
+            border: 2px dashed rgba(255,255,255,0.4);
+            border-radius: 50%;
+            animation: spin 15s linear infinite;
+        }
+
+        .blob-br { width: 350px; height: 350px; bottom: -100px; right: -50px; background: rgba(255,255,255,0.2); animation: morphBlob 10s ease-in-out infinite alternate-reverse; }
+
+        .dots-left {
+            position: absolute;
+            left: -20px; top: 40%;
+            width: 100px; height: 200px;
+            background-image: radial-gradient(rgba(255,255,255,0.5) 2px, transparent 2px);
+            background-size: 20px 20px;
+            transform: rotate(15deg);
+            opacity: 0.5;
+        }
+
+        .curve-bl {
+            position: absolute;
+            bottom: -50px; left: 20%;
+            width: 300px; height: 100px;
+            border-top: 4px solid rgba(255,255,255,0.4);
+            border-radius: 50%;
+            transform: rotate(-10deg);
+        }
+
+        @keyframes morphBlob {
+            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            100% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* --- CONTAINER --- */
+        .container {
+            width: 100%;
+            max-width: 480px;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        /* --- LOGO HERO (UPDATED EFFECTS) --- */
+        .logo-wrapper {
+            position: relative;
+            width: 260px; /* Container sedikit lebih besar untuk efek dekorasi */
+            height: 260px;
+            margin: 0 auto 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Animasi Melayang */
+            animation: floatLogo 6s ease-in-out infinite; 
+        }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* 1. Cahaya Berdenyut (Pulse) */
+        .pulse-glow {
+            position: absolute;
+            width: 200px; height: 200px;
+            background: rgba(255, 215, 0, 0.3); /* Cahaya keemasan */
+            border-radius: 50%;
+            z-index: 0;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.6; }
+            70% { transform: scale(1.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+
+        /* 2. Cincin Dekoratif */
+        .deco-ring {
+            position: absolute;
+            width: 100%; height: 100%;
+            border: 3px solid rgba(255,255,255,0.6);
+            border-radius: 50%;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            animation: spin 8s linear infinite reverse;
+            box-shadow: 0 0 15px rgba(255,255,255,0.2);
+        }
+        
+        .deco-ring-2 {
+            position: absolute;
+            width: 120%; height: 120%;
+            border: 1px dashed rgba(255,255,255,0.5);
+            border-radius: 50%;
+            animation: spin 25s linear infinite;
+        }
+
+        /* 3. Partikel / Bintang Mengorbit (Shapes) */
+        .particle {
+            position: absolute;
+            width: 12px; height: 12px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255,255,255,0.8);
+            z-index: 1;
+        }
+
+        .p1 { top: 20px; left: 50%; animation: orbit 6s linear infinite; width: 8px; height: 8px; }
+        .p2 { bottom: 30px; right: 20px; animation: orbit 8s linear infinite reverse; width: 10px; height: 10px; background: #FFD700; }
+        .p3 { top: 40%; left: -10px; animation: orbit 7s linear infinite; width: 6px; height: 6px; background: #FF69B4; }
+        .p4 { top: 10%; right: 10%; width: 15px; height: 15px; border: 2px solid #fff; background: transparent; animation: spin 5s linear infinite; }
+
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(140px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(140px) rotate(-360deg); }
+        }
+
+        /* --- GAMBAR LOGO --- */
+        .logo-img {
+            width: 200px; /* Ukuran gambar logo yang asli */
+            height: auto;
+            border-radius: 50%;
+            border: 8px solid #fff; /* Border putih tebal agar menonjol */
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2), 0 0 0 4px rgba(255,215,0,0.3); /* Bayangan dalam dan luar */
+            position: relative;
+            z-index: 5;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            object-fit: cover;
+        }
+
+        .logo-wrapper:hover .logo-img {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3), 0 0 0 8px rgba(255,215,0,0.5);
+        }
+
+        .brand-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            color: rgba(255,255,255,0.95);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 35px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* --- HERO BUTTONS --- */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .hero-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--glass-solid);
+            padding: 18px 24px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-btn::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9), transparent);
+            transform: skewX(-20deg); transition: 0.5s;
+        }
+        .hero-btn:hover::after { left: 150%; transition: 0.7s ease-in-out; }
+
+        .hero-btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .btn-content { display: flex; align-items: center; gap: 15px; }
+        .btn-icon { font-size: 1.8rem; transition: transform 0.3s; }
+        .hero-btn:hover .btn-icon { transform: scale(1.2) rotate(-5deg); }
+        .btn-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;}
+        .btn-info p { font-size: 0.75rem; color: #636e72; font-weight: 500; }
+
+        /* --- ACCORDION --- */
+        .accordion { display: flex; flex-direction: column; gap: 10px; }
+
+        .acc-item {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--border-glass);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .acc-item:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+        .acc-head {
+            padding: 16px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: background 0.2s;
+            user-select: none;
+        }
+        .acc-head:hover { background: rgba(255,255,255,0.5); }
+
+        .acc-left { display: flex; align-items: center; gap: 12px; }
+        .acc-icon { font-size: 1.3rem; }
+        .acc-title { font-weight: 700; font-size: 0.95rem; }
+        .acc-badge { 
+            background: rgba(0,0,0,0.06); 
+            padding: 2px 8px; 
+            border-radius: 8px; 
+            font-size: 0.7rem; 
+            color: #666; 
+            font-weight: 600;
+        }
+
+        .chevron { transition: transform 0.3s; color: #888; font-size: 0.9rem; }
+        .active .chevron { transform: rotate(180deg); color: #2d3436; }
+        .active .acc-head { background: #fff; border-bottom: 1px solid rgba(0,0,0,0.05); }
+
+        .acc-body {
+            max-height: 0;
+            overflow: hidden;
+            background: rgba(255,255,255,0.7);
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+        }
+
+        .acc-link {
+            display: block;
+            padding: 12px 22px 12px 62px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            text-align: left;
+            transition: 0.2s;
+            position: relative;
+        }
+        .acc-link:last-child { border-bottom: none; }
+        .acc-link:hover { 
+            background: rgba(255,255,255,0.9); 
+            padding-left: 68px; 
+            color: #d63031; 
+        }
+        
+        .highlight-link {
+            background: rgba(214, 48, 49, 0.05);
+            color: #d63031;
+            font-weight: 800;
+        }
+        .highlight-link:hover {
+            background: rgba(214, 48, 49, 0.1);
+        }
+
+        /* Icon Colors */
+        .ig-grad { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .tt-glow { color: #000; text-shadow: 2px 2px 0 #00f2ea, 3px 3px 0 #ff0050; }
+        .wa-green { color: #25D366; }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BACKGROUND DECORATION LAYER -->
+    <div class="background-layer">
+        <div class="organic-blob blob-tl"></div>
+        <div class="ring-tr"></div>
+        <div class="organic-blob blob-br"></div>
+        <div class="dots-left"></div>
+        <div class="curve-bl"></div>
+    </div>
+
+    <div class="container">
+        
+        <!-- LOGO WRAPPER (ENHANCED) -->
+        <div class="logo-wrapper">
+            <!-- Efek Cahaya Berdenyut -->
+            <div class="pulse-glow"></div>
+            
+            <!-- Cincin Mengelilingi -->
+            <div class="deco-ring"></div>
+            <div class="deco-ring-2"></div>
+            
+            <!-- Partikel/Bintang Mengorbit (Shapes) -->
+            <div class="particle p1"></div>
+            <div class="particle p2"></div>
+            <div class="particle p3"></div>
+            <div class="particle p4"></div>
+
+            <!-- GAMBAR LOGO BARU -->
+            <img src="https://z-cdn-media.chatglm.cn/files/8cba27da-3b60-4e85-a3d0-f1bc0eb30a29.png?auth_key=1868198765-18dfc845933a48edb073790ea5443367-0-5eaaf8cc43aa25008be3c3f945b3d512" 
+                 alt="RenggiJoy Logo" 
+                 class="logo-img">
+        </div>
+
+        <h1 class="brand-title">RenggiJoy</h1>
+        <p class="tagline">JOY IN EVERY BITE</p>
+
+        <!-- HERO BUTTONS -->
+        <div class="hero-section">
+            <a href="https://www.instagram.com/renggi_joy?igsh=MTB6ZGV3bHZsdm0xdw==" target="_blank" class="hero-btn">
+                <div class="btn-content">
+                    <i class="fab fa-instagram btn-icon ig-grad"></i>
+                    <div class="btn-info">
+                        <h3>Instagram</h3>
+                        <p>Produk</p>
+                    </div>
+                </div>
+                <i class="fas fa-arrow-right btn-icon" style="font-size: 1rem; opacity:0.3;"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@renggijoy_bkl?_r=1&_t=ZS-92zGmWTv8We" target="_blank" class="hero-btn">
+                <div class="btn-content">
+                    <i class="fab fa-tiktok btn-icon tt-glow"></i>
+                    <div class="btn-info">
+                        <h3>TikTok Shop</h3>
+                        <p>Produk</p>
+                    </div>
+                </div>
+                <i class="fas fa-arrow-right btn-icon" style="font-size: 1rem; opacity:0.3;"></i>
+            </a>
+        </div>
+
+        <!-- ACCORDION LIST -->
+        <div class="accordion">
+
+            <!-- Instagram Admin -->
+            <div class="acc-item">
+                <div class="acc-head" onclick="toggleAcc(this)">
+                    <div class="acc-left">
+                        <i class="fab fa-instagram acc-icon ig-grad"></i>
+                        <span class="acc-title">Instagram Admin</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span class="acc-badge">5 Akun</span>
+                        <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                </div>
+                <div class="acc-body">
+                    <a href="https://www.instagram.com/aldirzkid?igsh=MTBidTVqeG43djdxMQ==" class="acc-link highlight-link">Aldi</a>
+                    <a href="https://www.instagram.com/bintang_fardiansyah?igsh=aTdvMXF0MHNpZXNr" class="acc-link">Bintang</a>
+                    <a href="https://www.instagram.com/gizaazhr14?igsh=Zmw0ZHY2a3R0eTlt" class="acc-link">Giza</a>
+                    <a href="https://www.instagram.com/giann_aannn?igsh=MXFwNHNjcGRleDNnNA==" class="acc-link">Sugianto</a>
+                    <a href="https://www.instagram.com/zahwaputrii_s?igsh=MTMxamIyY244M2djbw==" class="acc-link">Zahwa</a>
+                </div>
+            </div>
+
+            <!-- WhatsApp Admin -->
+            <div class="acc-item">
+                <div class="acc-head" onclick="toggleAcc(this)">
+                    <div class="acc-left">
+                        <i class="fab fa-whatsapp acc-icon wa-green"></i>
+                        <span class="acc-title">WhatsApp Admin</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span class="acc-badge">5 Admin</span>
+                        <i class="fas fa-chevron-down chevron"></i>
+                    </div>
+                </div>
+                <div class="acc-body">
+                    <a href="https://wa.me/6282175926803" class="acc-link highlight-link">Aldi</a>
+                    <a href="https://wa.me/6282376393110" class="acc-link">Bintang</a>
+                    <a href="https://wa.me/6287810192244" class="acc-link">Giza</a>
+                    <a href="https://wa.me/6283824677472" class="acc-link">Sugianto</a>
+                    <a href="https://wa.me/6282280914867" class="acc-link">Zahwa</a>
+                </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer TANPA TAHUN -->
+        <div class="footer">
+            &copy; RenggiJoy Official
+        </div>
+    </div>
+
+    <script>
+        function toggleAcc(header) {
+            const item = header.parentElement;
+            const content = item.querySelector('.acc-body');
+            const isActive = item.classList.contains('active');
+
+            // Tutup semua accordion lain
+            document.querySelectorAll('.acc-item').forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('.acc-body').style.maxHeight = null;
+            });
+
+            // Buka yang diklik jika belum terbuka
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+    </script>
+
+</body>
+</html>
